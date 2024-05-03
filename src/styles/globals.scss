@@ -1,0 +1,107 @@
+@import "abstracts/index";
+
+:root {
+  font-size: 16px;
+
+  @include mobile() {
+    font-size: 12px;
+  }
+}
+
+body {
+  background-color: $clr-primary;
+  color: $clr-text;
+  font-family: var(--font-poppins);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-unbounded);
+}
+
+h1 {
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.icon {
+  display: block;
+  height: 16px;
+  aspect-ratio: 1;
+
+  img {
+    object-fit: contain;
+  }
+}
+
+button,
+.btn {
+  width: max-content;
+  align-self: center;
+  padding: rem(10) rem(24) rem(10);
+  font-size: rem(14);
+  border: none;
+  font-family: 'Clash Display', sans-serif;
+  background-color: $clr-secondary;
+  color: $clr-primary;
+  font-weight: 500;
+  cursor: pointer;
+  transition: scale 0.4s ease;
+  border-radius: rem(4);
+  display: block;
+  line-height: 1;
+
+  &:hover {
+    scale: 1.1;
+  }
+
+  &.alt {
+    border-radius: rem(8);
+    border: solid rem(3) $clr-secondary;
+    background-color: transparent;
+    color: $clr-secondary;
+  }
+}
+
+.btn-rounded {
+  border-radius: 100vmax;
+}
+
+input {
+  all: unset;
+  background: transparent;
+  border: 2px solid $clr-secondary;
+  display: flex;
+  padding: rem(8);
+  border-radius: rem(4);
+  font-weight: 600;
+
+  &::placeholder {
+    color: $clr-secondary;
+    opacity: 0.4;
+  }
+}
+
+.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+main {
+  min-height: 60vh;
+}
