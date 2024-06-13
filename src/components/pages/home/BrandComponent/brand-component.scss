@@ -1,0 +1,17 @@
+@use "utils.scss" as *;
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  aspect-ratio: 1;
+  background-color: $clr-text;
+  color: $clr-primary;
+
+  &-label {
+    text-transform: uppercase;
+    font-family: var(--font-unbounded), sans-serif;
+  }
+}
