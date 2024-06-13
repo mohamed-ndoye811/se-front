@@ -1,0 +1,21 @@
+@use "utils.scss" as *;
+
+.grid-lines {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(6, calc(100%/6));
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.2;
+    z-index: 0;
+    pointer-events: none;
+
+    span {
+        display: block;
+        height: 100%;
+        width: 1px;
+        background-color: $clr-text;
+    }
+}
