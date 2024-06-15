@@ -1,14 +1,11 @@
 "use client";
 
-import React from "react";
-import { TeamMember } from "@/types/teamMember.type";
 import { TeamMemberComponent } from "@/components/pages/home";
-import { Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import type { TeamMember } from "@/types/teamMember.type";
+import React from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-// Swiper styles
-import "swiper/scss";
-import "swiper/scss/navigation";
+import "@splidejs/react-splide/css/core";
 
 type Props = {
   teamMembers: TeamMember[];
@@ -16,28 +13,31 @@ type Props = {
 
 function TeamMemberSlider({ teamMembers }: Props) {
   return (
-    <div className={"team-member-slider"}>
-      <Swiper
-        modules={[Navigation]}
-        spaceBetween={0}
-        slidesPerView={1}
-        autoplay
-        navigation
-        loop
-      >
-        {teamMembers.map((teamMember, index) => (
-          <SwiperSlide key={`${teamMember}-${index}`}>
-            <TeamMemberComponent
-              key={teamMember.firstname}
-              firstname={teamMember.firstname}
-              lastname={teamMember.lastname}
-              role={teamMember.role}
-              avatar={teamMember.avatar}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <Splide
+      className={"team-member-slider"}
+      options={{
+        type: "loop",
+        perPage: 1,
+        perMove: 1,
+        gap: "0rem",
+        pagination: true,
+        mediaQuery: "min",
+        breakpoints: {
+          769: {
+            destroy: true,
+          },
+        },
+      }}
+    >
+      {teamMembers.map((teamMember, index) => (
+        <SplideSlide key={`${teamMember}-${index}`}>
+          <TeamMemberComponent
+            key={teamMember.firstname}
+            teamMember={teamMember}
+          />
+        </SplideSlide>
+      ))}
+    </Splide>
   );
 }
 

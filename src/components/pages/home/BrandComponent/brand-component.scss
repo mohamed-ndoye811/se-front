@@ -1,17 +1,21 @@
 @use "utils.scss" as *;
 
 .brand {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  aspect-ratio: 1;
-  background-color: $clr-text;
-  color: $clr-primary;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    text-align: center;
+    gap: 16px;
+    background-color: $clr-text;
+    color: $clr-primary;
+    padding: 24px;
 
-  &-label {
-    text-transform: uppercase;
-    font-family: var(--font-unbounded), sans-serif;
-  }
+    @include desktop {
+        padding: 48px;
+    }
+
+    &-label {
+        text-transform: uppercase;
+        font-family: var(--font-unbounded), sans-serif;
+    }
 }

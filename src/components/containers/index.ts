@@ -1,3 +1,3 @@
-import TeamMemberSlider  from "./TeamMemberSlider/TeamMemberSlider";
+import TeamMemberSlider from "./TeamMemberSlider/TeamMemberSlider";
 
-export {TeamMemberSlider};
+export { TeamMemberSlider };

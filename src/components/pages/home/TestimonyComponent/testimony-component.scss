@@ -1,0 +1,66 @@
+@use "utils.scss" as *;
+
+.testimony {
+    padding: 24px;
+    background-color: $clr-text;
+    color: $clr-primary;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+
+    &::after {
+        content: "”";
+        font-family: var(--font-unbounded);
+        font-size: 80px;
+        display: block;
+        position: absolute;
+        top: 16px;
+        left: 0;
+        color: $clr-secondary;
+        translate: -50% -50%;
+        font-weight: 800;
+    }
+
+    .reviewer {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+
+        .avatar {
+            width: 56px;
+            height: 56px;
+        }
+
+        .name {
+            font-family: var(--font-unbounded);
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 18px;
+
+            .first {
+                font-size: 12px;
+            }
+        }
+
+        .class {
+            margin-top: 4px;
+        }
+    }
+
+    .review {
+        .rate {
+            color: $clr-secondary;
+            margin-bottom: 8px;
+            font-family: var(--font-unbounded);
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+
+    &:nth-of-type(even) {
+        &::after {
+            left: 98%;
+        }
+    }
+}

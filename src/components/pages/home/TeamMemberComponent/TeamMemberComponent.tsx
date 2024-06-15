@@ -1,15 +1,15 @@
+import Image from "next/image";
 import React from "react";
-import Image, { StaticImageData } from "next/image";
 import "./team-member-component.scss";
+import { TeamMember } from "@/types/teamMember.type";
 
 type Props = {
-  firstname: string;
-  role: string;
-  lastname: string;
-  avatar: StaticImageData;
+  teamMember: TeamMember;
 };
 
-function TeamMemberComponent({ lastname, firstname, role, avatar }: Props) {
+function TeamMemberComponent({
+  teamMember: { lastname, firstname, role, avatar },
+}: Props) {
   return (
     <div className={"team-member"}>
       <Image
@@ -17,11 +17,13 @@ function TeamMemberComponent({ lastname, firstname, role, avatar }: Props) {
         alt={`photo de ${firstname} ${lastname}`}
         className={"image avatar"}
       />
-      <div className="name">
-        <div className="firstname">{firstname}</div>
-        <div className="lastname">{lastname}</div>
+      <div className="details">
+        <div className="name">
+          <div className="firstname">{firstname}</div>
+          <div className="lastname">{lastname}</div>
+        </div>
+        <p className="role">{role}</p>
       </div>
-      <p className="role">{role}</p>
     </div>
   );
 }

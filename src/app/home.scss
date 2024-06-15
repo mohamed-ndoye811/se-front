@@ -14,46 +14,8 @@ main {
         grid-template-columns: inherit;
         grid-column: 1/-1;
 
-        .header {
-            grid-column: 1/-1;
-            position: relative;
-            display: grid;
-            grid-template-columns: inherit;
-            align-items: center;
-
-            .image {
-                grid-column: 1/-1;
-                grid-row: 1;
-            }
-
-            .title {
-                grid-column: 2/-2;
-                grid-row: 1;
-                font-weight: 900;
-                text-transform: uppercase;
-                position: relative;
-                z-index: 1;
-                color: $clr-primary;
-                font-size: 24px;
-
-                span {
-                    position: relative;
-                    display: inline-block;
-                    padding: 4px 8px;
-
-                    &::after {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background: $clr-text;
-                        z-index: -1;
-                    }
-                }
-            }
+        .title {
+            text-transform: uppercase;
         }
 
         &#hero {
@@ -63,11 +25,21 @@ main {
             grid-template-rows: 65vh 1fr;
             grid-template-columns: inherit;
 
+            @include desktop {
+                grid-template-rows: 1fr;
+                align-items: center;
+            }
+
             .image {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
                 grid-column: 1/-1;
+
+                @include desktop {
+                    grid-column: 4/-1;
+                    grid-row: 1;
+                }
             }
 
             .text-wrapper {
@@ -77,22 +49,66 @@ main {
                 flex-direction: column;
                 justify-content: center;
 
+                @include desktop {
+                    grid-column: 2/5;
+                    grid-row: 1;
+                    display: grid;
+                    grid-template-columns: subgrid;
+                    height: max-content;
+                }
+
                 .title {
                     display: inline-flex;
                     flex-direction: column;
                     font-size: 12px;
+                    text-transform: uppercase;
+                    line-height: 1;
+                    position: relative;
 
                     span {
                         font-size: 20px;
                         font-weight: 900;
+                        display: block;
+                        position: relative;
+
+                        @include desktop {
+                            font-size: 56px;
+                            z-index: 1;
+                        }
+                    }
+
+                    @include desktop {
+                        grid-column: 1/-1;
+                        font-size: 16px;
+                        width: max-content;
+                        padding: 24px 32px 24px 0;
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            grid-column: 1/-1;
+                            top: 0;
+                            right: 0;
+                            width: 35%;
+                            height: 100%;
+                            background: $clr-primary;
+                            z-index: 0;
+                        }
                     }
                 }
 
-                .cta {
-                    display: block;
-                    color: $clr-secondary;
-                    margin-top: 24px;
-                    text-decoration: underline;
+                .text {
+                    @include desktop {
+                        grid-column: 1/-2;
+                    }
+
+                    .cta {
+                        display: block;
+                        color: $clr-secondary;
+                        margin-top: 24px;
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -103,10 +119,18 @@ main {
             position: relative;
             overflow: hidden;
 
+            @include desktop {
+                align-items: center;
+            }
+
             .wrapper {
                 grid-column: 2/-2;
                 position: relative;
                 z-index: 1;
+
+                @include desktop {
+                    grid-column: 4 / span 2;
+                }
 
                 .title {
                     font-size: 24px;
@@ -128,13 +152,93 @@ main {
                 left: 75%;
                 translate: -50% -50%;
                 z-index: 0;
+
+                @include desktop {
+                    position: relative;
+                    grid-column: 1 / span 3;
+                    translate: 0;
+                    grid-row: 1;
+                    bottom: 0;
+                    left: 0;
+                }
             }
         }
 
         &#structure {
+            @include desktop {
+                min-height: 100vh;
+                align-items: center;
+            }
+            .header {
+                grid-column: 1/-1;
+                position: relative;
+                display: grid;
+                grid-template-columns: inherit;
+                align-items: center;
+
+                @include desktop {
+                    grid-column: 3 / -1;
+                    grid-row: 1;
+                    height: 100%;
+                }
+
+                .image {
+                    grid-column: 1/-1;
+                    grid-row: 1;
+
+                    @include desktop {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .title {
+                    grid-column: 2/-2;
+                    grid-row: 1;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    position: relative;
+                    z-index: 1;
+                    color: $clr-primary;
+                    font-size: 24px;
+
+                    @include desktop {
+                        display: none;
+                    }
+
+                    span {
+                        position: relative;
+                        display: inline-block;
+                        padding: 4px 8px;
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: $clr-text;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+
             .text-wrapper {
                 grid-column: 2/-2;
                 padding-block: 16px;
+
+                @include desktop {
+                    grid-column: 2 / span 2;
+                    grid-row: 1;
+                    height: max-content;
+                    position: relative;
+                    z-index: 1;
+                    background-color: $clr-primary;
+                    padding: 24px 24px 24px 0;
+                }
             }
         }
 
@@ -158,8 +262,13 @@ main {
                     grid-column: 1/-1;
                     grid-template-columns: inherit;
 
+                    @include desktop {
+                        grid-template-rows: 239px 239px;
+                    }
+
                     .brand {
                         grid-column: span 2;
+                        height: 100%;
                     }
                 }
             }
@@ -169,11 +278,123 @@ main {
             @extend #sponsors;
             padding-block: 80px;
 
-            .team-members {
+            .team-member-slider {
                 grid-column: 1/-1;
+                display: grid;
+                grid-template-columns: subgrid;
 
-                .team-member {
-                    margin: 0 calc(100% / 6);
+                .splide__list {
+                    @include desktop {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+
+                .splide__track {
+                    grid-column: 1/-1;
+
+                    @include desktop {
+                        grid-column: 2/-2;
+                    }
+                }
+
+                .splide__arrow--prev {
+                    left: 1em;
+
+                    svg {
+                        transform: scaleX(-1);
+                    }
+                }
+
+                .splide__arrow--next {
+                    right: 1em;
+                }
+
+                .splide__arrow {
+                    align-items: center;
+                    background: #ccc;
+                    border: 0;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    display: flex;
+                    height: 2em;
+                    justify-content: center;
+                    opacity: 0.7;
+                    padding: 0;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 2em;
+                    z-index: 1;
+
+                    svg {
+                        fill: #000;
+                        height: 1.2em;
+                        width: 1.2em;
+                    }
+                }
+
+                .splide__pagination {
+                    bottom: -2.5em;
+                    left: 0;
+                    padding: 0 1em;
+                    position: absolute;
+                    right: 0;
+
+                    &__page {
+                        background-color: rgba(36, 38, 43, 0.2);
+                        background: #ccc;
+                        border: 0;
+                        border-radius: 50%;
+                        display: inline-block;
+                        height: 8px;
+                        margin: 3px;
+                        padding: 0;
+                        position: relative;
+                        transition: transform 0.2s linear;
+                        width: 8px;
+
+                        &.is-active {
+                            background-color: #ee8144;
+                            transform: scale(1.4);
+                        }
+                    }
+                }
+            }
+        }
+
+        &#testimonies {
+            @extend #sponsors;
+            padding-block: 96px 64px;
+
+            .wrapper {
+                row-gap: 32px;
+                grid-column: 1/-1;
+                display: grid;
+                grid-template-columns: inherit;
+
+                .title {
+                    grid-column: 1/-1;
+                    text-align: center;
+                }
+
+                .testimonies {
+                    grid-column: 2/-2;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 64px;
+
+                    .testimony {
+                        @include desktop {
+                            width: 50%;
+                        }
+
+                        &:nth-of-type(even) {
+                            @include desktop {
+                                align-self: flex-end;
+                            }
+                        }
+                    }
                 }
             }
         }
