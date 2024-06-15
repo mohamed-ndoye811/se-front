@@ -106,9 +106,14 @@ main {
                 }
 
                 .text {
+                    p {
+                        padding-right: 8px;
+                    }
+
                     @include desktop {
                         grid-column: 1/-2;
                     }
+
 
                     .cta {
                         display: block;
@@ -366,6 +371,17 @@ main {
             }
         }
 
+        &#programs {
+            height: 100vh;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+            @include desktop {
+                grid-template-columns: inherit;
+                grid-template-rows: 1fr;
+            }
+        }
+
         &#testimonies {
             @extend #sponsors;
             padding-block: 96px 64px;
@@ -410,6 +426,10 @@ main {
             display: grid;
             grid-template-rows: 4fr 3fr;
             height: 100vh;
+
+            @include desktop {
+                grid-template-rows: 1fr;
+            }
 
             .text-content {
                 grid-row: 2;

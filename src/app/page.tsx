@@ -15,6 +15,8 @@ import { TeamMember } from "@/types/teamMember.type";
 import { Testimony } from "@/types/testimony.type";
 import TestimoniesList from "@/components/containers/TestimoniesList/TestimoniesList";
 import MapComponent from "../components/app/MapComponent/MapComponent";
+import { StudyClass } from "@/types/studyClass.type";
+import StudyClassesList from "../components/containers/StudyClassesList/StudyClassesList";
 
 export const metadata: Metadata = {
 	title: "Sen'excellence",
@@ -54,49 +56,6 @@ const teamMembers: TeamMember[] = [
 	},
 ];
 
-const testimonies: Testimony[] = [
-	{
-		id: 1,
-		firstname: "Prenom",
-		lastname: "Nom",
-		role: "Parent d'élève",
-		avatar: avatarExampleImg,
-		rate: 4.75,
-		review:
-			"Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-	},
-	{
-		id: 2,
-		firstname: "Prenom",
-		lastname: "Nom",
-		role: "Parent d'élève",
-		avatar: avatarExampleImg,
-		rate: 4.75,
-		review:
-			"Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-	},
-	{
-		id: 3,
-		firstname: "Prenom",
-		lastname: "Nom",
-		role: "Parent d'élève",
-		avatar: avatarExampleImg,
-		rate: 4.75,
-		review:
-			"Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-	},
-	{
-		id: 4,
-		firstname: "Prenom",
-		lastname: "Nom",
-		role: "Parent d'élève",
-		avatar: avatarExampleImg,
-		rate: 4.75,
-		review:
-			"Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-	},
-];
-
 export default function Home() {
 	return (
 		<main>
@@ -109,8 +68,9 @@ export default function Home() {
 					</h1>
 					<div className='text'>
 						<p>
-							Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-							vulputate libero et velit interdum, ac aliquet odio mattis.
+							Découvrez l&apos;excellence éducative au cœur du Sénégal, où
+							chaque élève trouve l&apos;inspiration pour atteindre son plein
+							potentiel et façonner un avenir prometteur.
 						</p>
 						<Link href={"/a-propos"} className='cta'>
 							En savoir plus
@@ -124,27 +84,31 @@ export default function Home() {
 					<h2 className='title'>Notre projet</h2>
 					<div className='text-wrapper'>
 						<p>
-							Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-							turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-							nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-							tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-							feugiat lectus. Class aptent taciti sociosqu ad litora torquent
-							per conubia nostra, per inceptos himenaeos. Praesent auctor purus
-							luctus enim egestas, ac scelerisque ante pulvinar. Donec ut
-							rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur
-							vel bibendum lorem. Morbi convallis convallis diam sit amet
-							lacinia. Aliquam in elementum tellus.
+							Imaginez un lieu où l&apos;éducation de votre enfant est prise en
+							charge de la crèche jusqu&apos;au lycée, garantissant un parcours
+							harmonieux et une réussite post-bac assurée. C&apos;est
+							l&apos;essence même de notre complexe scolaire.
 							<br />
 							<br />
-							Curabitur tempor quis eros tempus lacinia. Nam bibendum
-							pellentesque quam a convallis. Sed ut vulputate nisi. Integer in
-							felis sed leo vestibulum venenatis. Suspendisse quis arcu sem.
-							Aenean feugiat ex eu vestibulum vestibulum. Morbi a eleifend
-							magna. Nam metus lacus, porttitor eu mauris a, blandit ultrices
-							nibh. Mauris sit amet magna non ligula vestibulum eleifend. Nulla
-							varius volutpat turpis sed lacinia. Nam eget mi in purus lobortis
-							eleifend. Sed nec ante dictum sem condimentum ullamcorper quis
-							venenatis nisi. Proin vitae facilisis nisi, ac posuere leo.
+							Nous avons conçu un environnement d&apos;excellence où chaque
+							élève est guidé et encouragé à donner le meilleur de lui-même.
+							Grâce à un suivi personnalisé et des méthodes pédagogiques
+							innovantes, nous préparons nos élèves à devenir des acteurs
+							accomplis de leur propre avenir.
+							<br />
+							<br />
+							Notre équipe éducative, passionnée et expérimentée, met tout en
+							œuvre pour offrir une éducation de haute qualité, soutenue par des
+							infrastructures modernes et des programmes enrichissants. Notre
+							objectif est de cultiver les talents et les compétences
+							nécessaires pour que chaque enfant puisse s&apos;épanouir
+							pleinement et réussir dans ses études supérieures et au-delà.
+							<br />
+							<br />
+							Rejoignez notre communauté scolaire et offrez à votre enfant
+							l&apos;opportunité de bénéficier d&apos;un parcours éducatif
+							exceptionnel. Ensemble, construisons un avenir radieux pour votre
+							enfant, dès aujourd&apos;hui.
 						</p>
 					</div>
 				</div>
@@ -166,27 +130,33 @@ export default function Home() {
 				<div className='text-wrapper'>
 					<h2 className='title'>Notre structure</h2>
 					<p>
-						Morem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-						turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-						nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-						tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-						feugiat lectus. Class aptent taciti sociosqu ad litora torquent per
-						conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus
-						enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex.
-						Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum
-						lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in
-						elementum tellus.
+						Notre complexe scolaire regroupe toutes les écoles en une seule
+						structure cohérente et harmonieuse, offrant un environnement propice
+						à l&apos;épanouissement de chaque élève. Nos bâtiments modernes et
+						bien équipés sont conçus pour répondre aux besoins spécifiques des
+						différentes tranches d&apos;âge, de la crèche au lycée.
 						<br />
 						<br />
-						Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque
-						quam a convallis. Sed ut vulputate nisi. Integer in felis sed leo
-						vestibulum venenatis. Suspendisse quis arcu sem. Aenean feugiat ex
-						eu vestibulum vestibulum. Morbi a eleifend magna. Nam metus lacus,
-						porttitor eu mauris a, blandit ultrices nibh. Mauris sit amet magna
-						non ligula vestibulum eleifend. Nulla varius volutpat turpis sed
-						lacinia. Nam eget mi in purus lobortis eleifend. Sed nec ante dictum
-						sem condimentum ullamcorper quis venenatis nisi. Proin vitae
-						facilisis nisi, ac posuere leo.
+						La cantine, située au cœur de notre établissement, propose une
+						restauration équilibrée et savoureuse, permettant aux élèves de se
+						nourrir sainement tout au long de la journée. Nos chefs cuisiniers
+						s&apos;assurent de préparer des repas variés et nutritifs, adaptés
+						aux besoins nutritionnels des enfants et adolescents.
+						<br />
+						<br />
+						Pour favoriser le bien-être et la détente de nos élèves, notre
+						complexe dispose de deux cours de récréation distinctes. Ces espaces
+						extérieurs sont aménagés pour offrir des moments de pause et de
+						ressourcement entre les cours. Les plus jeunes peuvent s&apos;amuser
+						en toute sécurité dans une cour adaptée à leurs besoins, tandis que
+						les plus grands disposent d&apos;un espace où ils peuvent se
+						détendre et interagir avec leurs camarades.
+						<br />
+						<br />
+						Chaque détail de notre structure est pensé pour créer un cadre de
+						vie scolaire agréable et stimulant, où les élèves peuvent
+						s&apos;épanouir pleinement et réussir leurs études dans les
+						meilleures conditions possibles.
 					</p>
 				</div>
 			</section>
@@ -213,14 +183,14 @@ export default function Home() {
 			</section>
 
 			<section id='programs'>
-				<div className='class'></div>
+				<StudyClassesList />
 			</section>
 
 			<section id='testimonies'>
 				<div className='wrapper'>
 					<h2 className='title'>Témoignages</h2>
 					<div className='testimonies'>
-						<TestimoniesList testimonies={testimonies} />
+						<TestimoniesList />
 					</div>
 				</div>
 			</section>
