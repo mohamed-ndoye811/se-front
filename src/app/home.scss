@@ -2,7 +2,7 @@
 
 main {
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(6, calc(100% / 6));
     position: relative;
@@ -16,6 +16,13 @@ main {
 
         .title {
             text-transform: uppercase;
+            font-weight: 900;
+            font-family: var(--font-unbounded);
+            font-size: 20px;
+
+            @include desktop {
+                font-size: 32px;
+            }
         }
 
         &#hero {
@@ -72,7 +79,7 @@ main {
                         position: relative;
 
                         @include desktop {
-                            font-size: 56px;
+                            font-size: 64px;
                             z-index: 1;
                         }
                     }
@@ -90,7 +97,7 @@ main {
                             grid-column: 1/-1;
                             top: 0;
                             right: 0;
-                            width: 35%;
+                            width: 50%;
                             height: 100%;
                             background: $clr-primary;
                             z-index: 0;
@@ -132,10 +139,6 @@ main {
                     grid-column: 4 / span 2;
                 }
 
-                .title {
-                    font-size: 24px;
-                }
-
                 .text-wrapper {
                     display: inline-flex;
                     flex-direction: column;
@@ -169,6 +172,7 @@ main {
                 min-height: 100vh;
                 align-items: center;
             }
+
             .header {
                 grid-column: 1/-1;
                 position: relative;
@@ -252,7 +256,6 @@ main {
 
                 .title {
                     grid-column: 2/-2;
-                    font-size: 24px;
                     text-align: center;
                     text-transform: uppercase;
                 }
@@ -395,6 +398,54 @@ main {
                             }
                         }
                     }
+                }
+            }
+        }
+
+        &#location {
+            min-height: 100vh;
+            align-items: center;
+
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-rows: 4fr 3fr;
+            height: 100vh;
+
+            .text-content {
+                grid-row: 2;
+                grid-column: 2 / -2;
+
+                @include desktop {
+                    grid-column: 2 / span 2;
+                    grid-row: 1;
+                }
+
+                .title {
+                    margin-bottom: 24px;
+                }
+
+                .subtitle {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-family: var(--font-unbounded);
+                    font-size: 14px;
+                    margin-bottom: 8px;
+                }
+
+                .address,
+                .phone {
+                    margin-bottom: 16px;
+                }
+            }
+
+            .map {
+                grid-row: 1;
+                grid-column: 1 / -1;
+                height: 100%;
+
+                @include desktop {
+                    grid-column: 4 / -2;
+                    height: 80%;
                 }
             }
         }
