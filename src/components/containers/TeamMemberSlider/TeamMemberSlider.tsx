@@ -3,6 +3,8 @@
 import { TeamMemberComponent } from "@/components/pages/home";
 import type { TeamMember } from "@/types/teamMember.type";
 import React from "react";
+
+// @ts-ignore
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 import "@splidejs/react-splide/css/core";
