@@ -11,6 +11,11 @@
     opacity: 0.2;
     z-index: 0;
     pointer-events: none;
+    justify-items: center;
+
+    @include desktop {
+        justify-items: unset;
+    }
 
     span {
         display: block;

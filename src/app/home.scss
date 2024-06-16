@@ -31,10 +31,12 @@ main {
             display: grid;
             grid-template-rows: 60dvh 40dvh;
             grid-template-columns: inherit;
+            margin-inline: -13vw;
 
             @include desktop {
                 grid-template-rows: 1fr;
                 align-items: center;
+                margin-inline: 0;
             }
 
             .image {
@@ -130,9 +132,11 @@ main {
             min-height: 100vh;
             position: relative;
             overflow: hidden;
+            margin-inline: -13vw;
 
             @include desktop {
                 align-items: center;
+                margin-inline: 0;
             }
 
             .wrapper {
@@ -175,9 +179,12 @@ main {
         }
 
         &#structure {
+            margin-inline: -13vw;
+
             @include desktop {
                 min-height: 100vh;
                 align-items: center;
+                margin-inline: 0;
             }
 
             .header {
@@ -387,6 +394,11 @@ main {
         &#testimonies {
             @extend #sponsors;
             padding-block: 96px 64px;
+            margin-inline: -13vw;
+
+            @include desktop {
+                margin-inline: 0;
+            }
 
             .wrapper {
                 row-gap: 32px;
@@ -428,9 +440,11 @@ main {
             display: grid;
             grid-template-rows: 50dvh 50dvh;
             height: 100vh;
-
+            margin-inline: -13vw;
+            
             @include desktop {
                 grid-template-rows: 1fr;
+                margin-inline: 0;
             }
 
             .text-content {
@@ -464,10 +478,12 @@ main {
                 grid-row: 1;
                 grid-column: 1 / -1;
                 height: 100%;
-
+                margin-inline: 13vw;
+                
                 @include desktop {
                     grid-column: 4 / -2;
                     height: 80%;
+                    margin-inline: 0;
                 }
             }
         }
