@@ -73,8 +73,7 @@ export default function Home() {
 					<div className='text'>
 						<p>
 							Découvrez l&apos;excellence éducative au cœur du Sénégal, où
-							chaque élève trouve l&apos;inspiration pour atteindre son plein
-							potentiel et façonner un avenir prometteur.
+							chaque élève est accompagné pour atteindre son plein potentiel et façonner un avenir prometteur.
 						</p>
 						<Link href={"/a-propos"} className='cta'>
 							En savoir plus

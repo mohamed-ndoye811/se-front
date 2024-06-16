@@ -29,7 +29,7 @@ main {
             height: 100vh;
             overflow: hidden;
             display: grid;
-            grid-template-rows: 65vh 1fr;
+            grid-template-rows: 60dvh 40dvh;
             grid-template-columns: inherit;
 
             @include desktop {
@@ -139,9 +139,11 @@ main {
                 grid-column: 2/-2;
                 position: relative;
                 z-index: 1;
+                margin-bottom: 15vh;
 
                 @include desktop {
                     grid-column: 4 / span 2;
+                    margin-bottom: 0;
                 }
 
                 .text-wrapper {
@@ -424,7 +426,7 @@ main {
 
             grid-column: 1 / -1;
             display: grid;
-            grid-template-rows: 4fr 3fr;
+            grid-template-rows: 50dvh 50dvh;
             height: 100vh;
 
             @include desktop {
