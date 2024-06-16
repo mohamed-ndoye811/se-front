@@ -6,6 +6,7 @@ import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 import "@splidejs/react-splide/css/core";
+import "./team-member-slider.scss";
 
 type Props = {
   teamMembers: TeamMember[];
