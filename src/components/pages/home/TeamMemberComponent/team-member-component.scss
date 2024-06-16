@@ -8,6 +8,7 @@
     background-color: $clr-text;
     color: $clr-primary;
     padding: 32px 16px;
+    cursor: default;
 
     @include desktop {
         flex-direction: row;
