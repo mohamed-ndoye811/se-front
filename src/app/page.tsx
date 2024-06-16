@@ -12,10 +12,8 @@ import { TeamMemberSlider } from "@/components/containers";
 import { BrandComponent } from "@/components/pages/home";
 import type { Metadata } from "next";
 import { TeamMember } from "@/types/teamMember.type";
-import { Testimony } from "@/types/testimony.type";
 import TestimoniesList from "@/components/containers/TestimoniesList/TestimoniesList";
 import MapComponent from "../components/app/MapComponent/MapComponent";
-import { StudyClass } from "@/types/studyClass.type";
 import StudyClassesList from "../components/containers/StudyClassesList/StudyClassesList";
 
 export const metadata: Metadata = {
