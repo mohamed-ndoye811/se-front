@@ -18,7 +18,8 @@ import StudyClassesList from "../components/containers/StudyClassesList/StudyCla
 
 export const metadata: Metadata = {
 	title: "Sen'Excellence - Complexe Scolaire Sénégalais de la Crèche au Lycée",
-	description: "Découvrez notre complexe scolaire au Sénégal, offrant une éducation de la crèche au lycée dans des infrastructures modernes. Cantine, cours de récréation adaptées, suivi personnalisé et excellence pédagogique pour garantir un parcours post-bac réussi.",
+	description:
+		"Découvrez notre complexe scolaire au Sénégal, offrant une éducation de la crèche au lycée dans des infrastructures modernes. Cantine, cours de récréation adaptées, suivi personnalisé et excellence pédagogique pour garantir un parcours post-bac réussi.",
 };
 
 const teamMembers: TeamMember[] = [
@@ -73,7 +74,8 @@ export default function Home() {
 					<div className='text'>
 						<p>
 							Découvrez l&apos;excellence éducative au cœur du Sénégal, où
-							chaque élève est accompagné pour atteindre son plein potentiel et façonner un avenir prometteur.
+							chaque élève est accompagné pour atteindre son plein potentiel et
+							façonner un avenir prometteur.
 						</p>
 						<Link href={"/a-propos"} className='cta'>
 							En savoir plus
@@ -202,8 +204,8 @@ export default function Home() {
 						<div className='address'>
 							<p className='subtitle'>ADRESSE</p>
 							<p>
-								Lots 114 lotissement de la série G, <br /> Rufisque Est,{" "}
-								<b>SÉNÉGAL</b>
+								Lots 114 lotissement de la série G, <br /> Rufisque Est,
+								Sangalkam, <b>SÉNÉGAL</b>
 							</p>
 						</div>
 						<div className='phone'>
