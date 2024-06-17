@@ -10,7 +10,6 @@ const Mapbox = ReactMapboxGl({
 });
 
 export default function MapComponent() {
-
 	return (
 		<div className='map' data-lenis-prevent>
 			<Mapbox
@@ -19,10 +18,10 @@ export default function MapComponent() {
 					height: "100%",
 					width: "100%",
 				}}
-				center={[-17.2479149, 14.7284456]}
-        zoom={[18]}>
+				center={[-17.247921264624427, 14.72851183915288]}
+				zoom={[18]}>
 				<Layer type='symbol' id='marker' layout={{ "icon-image": "marker-15" }}>
-					<Feature coordinates={[-17.2479149, 14.7284456]} />
+					<Feature coordinates={[-17.247921264624427, 14.72851183915288]} />
 				</Layer>
 			</Mapbox>
 		</div>
