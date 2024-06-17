@@ -210,7 +210,7 @@ export default function Home() {
 						</div>
 						<div className='phone'>
 							<p className='subtitle'>Telephone</p>
-							<a href='tel:+221 33 836 12 49'>+221 33 836 12 49</a>
+							<a href='tel:+221784837811'>+221 78 483 78 11</a>
 						</div>
 						<div className='socials'></div>
 					</div>
