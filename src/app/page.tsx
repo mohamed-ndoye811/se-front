@@ -207,6 +207,10 @@ export default function Home() {
               <p className="subtitle">Telephone</p>
               <a href="tel:+221784837811">+221 78 483 78 11</a>
             </div>
+            <div className="phone">
+              <p className="subtitle">Mail</p>
+              <a href="mailto:senexcellence@hotmail.com">senexcellence@hotmail.com</a>
+            </div>
             <div className="socials"></div>
           </div>
         </div>
