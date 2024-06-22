@@ -5,4 +5,5 @@ export type StudyClass = {
   age: string;
   name: string;
   image: StaticImageData;
+  open ?: boolean
 };

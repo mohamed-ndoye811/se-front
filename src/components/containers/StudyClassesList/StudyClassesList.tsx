@@ -9,19 +9,22 @@ import StudyClassComponent from "@/components/pages/home/StudyClassComponent/Stu
 
 const studyClasses: StudyClass[] = [
 	{
-		age: "2-5",
+		age: "2 à 5",
 		name: "sen'espoirs",
 		image: senespoirs,
+		open: true,
 	},
 	{
 		age: "12-15",
 		name: "sen'élite",
 		image: senelite,
+		open: false,
 	},
 	{
 		age: "16-18",
 		name: "sen'experts",
 		image: senexperts,
+		open: false,
 	},
 ];
 
