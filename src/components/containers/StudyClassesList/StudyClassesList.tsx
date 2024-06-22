@@ -15,13 +15,13 @@ const studyClasses: StudyClass[] = [
 		open: true,
 	},
 	{
-		age: "6 à 14",
+		age: "6 à 15",
 		name: "sen'élite",
 		image: senelite,
 		open: false,
 	},
 	{
-		age: "15 à 18",
+		age: "16 à 19",
 		name: "sen'experts",
 		image: senexperts,
 		open: false,
