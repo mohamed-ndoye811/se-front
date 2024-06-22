@@ -7,6 +7,7 @@ import brandExempleImg from "@/images/home/brand-placeholder.svg";
 import structureImg from "@/images/home/building.jpg";
 import heroImg from "@/images/home/hero.jpg";
 import aboutImg from "@/images/home/study-hat.png";
+import photoMarieme from "@/images/staff/marieme.jpg";
 
 import { TeamMemberSlider } from "@/components/containers";
 import { BrandComponent } from "@/components/pages/home";
@@ -16,6 +17,7 @@ import TestimoniesList from "@/components/containers/TestimoniesList/Testimonies
 import MapComponent from "../components/app/MapComponent/MapComponent";
 import StudyClassesList from "../components/containers/StudyClassesList/StudyClassesList";
 
+
 export const metadata: Metadata = {
   title: "Sen'Excellence - Complexe Scolaire Sénégalais de la Crèche au Lycée",
   description:
@@ -24,10 +26,10 @@ export const metadata: Metadata = {
 
 const teamMembers: TeamMember[] = [
   {
-    avatar: avatarExampleImg,
-    firstname: "Prenom",
-    lastname: "Nom",
-    role: "Qorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    avatar: photoMarieme,
+    firstname: "Marieme",
+    lastname: "Ndiaye",
+    role: "Directrice de l'établissement",
   },
   {
     avatar: avatarExampleImg,
@@ -137,19 +139,19 @@ export default function Home() {
             <br />
             <br />
             Notre objectif étant d&apos;accompagner nos élèves jusqu&apos;aux
-            études supérieures, nous ouvriront les classes au-dessus au fur et à
+            études supérieures, nous ouvrirons les classes au-dessus au fur et à
             mesure. Les ouvertures des formations post bac seront étudiées en
             fonction des besoins ressentis
             <br />
             <br />
-            Sen&apos;excellence propose des bâtiments modernes, spacieux et
+            SEN&apos;EXCELLENCE propose des bâtiments modernes, spacieux et
             équipés pour répondre aux besoins spécifiques des différentes
             tranches d&apos;âge. Chaque détail de notre structure est pensé pour
             créer un cadre de vie scolaire agréable et stimulant, où les élèves
             peuvent s&apos;épanouir pleinement et réussir leurs études dans les
             meilleures conditions.
             <br />
-            <br />À leur disposition, deux cours de récréations, médiathèque,
+            <br />À leur disposition, deux cours de récréation, médiathèque,
             infirmerie, cantine, potager, salle de motricité
             et bien d&apos;autres!
           </p>
