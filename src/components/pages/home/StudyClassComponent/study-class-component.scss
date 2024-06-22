@@ -39,6 +39,11 @@
             text-transform: lowercase;
         }
 
+        .closed {
+            text-transform: none;
+            margin-top: 8px;
+        }
+
         p {
             display: inline-block;
             position: relative;
