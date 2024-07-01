@@ -7,7 +7,9 @@ import brandExempleImg from "@/images/home/brand-placeholder.svg";
 import structureImg from "@/images/home/building.jpg";
 import heroImg from "@/images/home/hero.jpg";
 import aboutImg from "@/images/home/study-hat.png";
+
 import photoMarieme from "@/images/staff/marieme.jpg";
+import photoMrSall from "@/images/staff/mr_sall.jpg";
 
 import { TeamMemberSlider } from "@/components/containers";
 import { BrandComponent } from "@/components/pages/home";
@@ -32,10 +34,10 @@ const teamMembers: TeamMember[] = [
     role: "Directrice de l'établissement",
   },
   {
-    avatar: avatarExampleImg,
-    firstname: "Prenom",
-    lastname: "Nom",
-    role: "Qorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    avatar: photoMrSall,
+    firstname: "Mr",
+    lastname: "Sall",
+    role: "Professeur Sen'espoirs",
   },
   {
     avatar: avatarExampleImg,
@@ -199,8 +201,7 @@ export default function Home() {
             <div className="address">
               <p className="subtitle">ADRESSE</p>
               <p>
-                Lots 114 lotissement de la série G, <br /> Rufisque Est,
-                Sangalkam, <b>SÉNÉGAL</b>
+                Lots 114 lotissement de la série G, <br /> Rufisque Est, <b>SÉNÉGAL</b>
               </p>
             </div>
             <div className="phone">
